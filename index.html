@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            text-decoration: none;
+            list-style: none;
+        }
+        img{
+            width: 200px;
+            height: auto;
+        }
+        .imagen{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Champions League</h1>
+    <div id="contenidoNoticias">
+        <p>Aqui iran las noticias</p>
+    </div>
+    <script>
+        // console.log("Noticias")
+        // const arrayNoticias = []
+        // console.log(arrayNoticias)
+        // const objetoNoticia = {
+        //     titulo: `Remontada!`,
+        //     texto: `barça remonta increiblemente`,
+        //     imagen: `https://th.bing.com/th/id/OIP.U92jO2rvLbsyIUG4gP8aIAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3`
+        // }
+        // console.log(objetoNoticia)
+        // console.log(objetoNoticia.titulo)
+        // console.log(objetoNoticia.texto)
+        const noticias = [
+            {
+                titulo: "<h2>Remontada del Barça!</h2>",
+                texto: "<p>En el ultimo partido el barça remonto 8-7</p>",
+                imagen: `<img src="https://th.bing.com/th/id/OIP.U92jO2rvLbsyIUG4gP8aIAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">`
+            },
+            {
+                titulo: "<h2>Remontada del Madrid!</h2>",
+                texto: "<p>En el ultimo partido el madrid remonto 2-1</p>",
+                imagen: `<img class="imagen" src="https://www.smartfootball.es/wp-content/uploads/2023/01/real-madrid-escudo.png" alt="">`
+            },
+            {
+                titulo: "<h2>Remontada del Betis!</h2>",
+                texto: "<p>En el ultimo partido el betis remonto 54-53</p>",
+                imagen: ` <img  src="https://bodeguitaelacerao.com/wp-content/uploads/2018/09/935px-Real_betis_logo.svg_.png" alt="">`
+            }
+        ]
+        
+        // console.log(noticias[0].titulo)
+        // console.log(noticias[2].texto)
+        // for (let i = 0; i < noticias.length; i ++){
+        //     console.log(noticias[i].titulo)
+        // }
+    </script>
+    <script>
+
+        let listaNoticias = "<ul>"
+        for(let i = 0; i < noticias.length; i++){
+            listaNoticias += `<li>${noticias[i].titulo}</li>`
+            listaNoticias += `<li>${noticias[i].texto}</li>`
+            listaNoticias += `<li>${noticias[i].imagen}</li>`
+        }
+        listaNoticias=listaNoticias + "</ul>"
+        document.querySelector("#contenidoNoticias").innerHTML = listaNoticias
+    </script>
+</body>
+</html>
